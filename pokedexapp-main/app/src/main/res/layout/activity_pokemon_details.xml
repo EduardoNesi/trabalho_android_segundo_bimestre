@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/detalhesPokemon"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PokemonDetailsActivity">
+
+    <ImageView
+        android:id="@+id/imagemPoke"
+        android:layout_width="162dp"
+        android:layout_height="157dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.035"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/nomePokemon"
+        android:layout_width="103dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:height="70px"
+        android:background="#FFFFFF"
+        android:capitalize="characters"
+        android:fontFamily="sans-serif-medium"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imagemPoke"
+        app:layout_constraintVertical_bias="0.018" />
+
+    <TextView
+        android:id="@+id/altura"
+        android:layout_width="224dp"
+        android:layout_height="19dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.698"
+        app:layout_constraintStart_toEndOf="@+id/nome_altura"
+        app:layout_constraintTop_toBottomOf="@+id/nomePokemon"
+        app:layout_constraintVertical_bias="0.028" />
+
+    <TextView
+        android:id="@+id/nome_altura"
+        android:layout_width="96dp"
+        android:layout_height="18dp"
+        android:text="Altura: "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nomePokemon"
+        app:layout_constraintVertical_bias="0.032" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/habilidadesRecycler"
+        android:layout_width="360dp"
+        android:layout_height="39dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.725"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/habilidadesNome"
+        app:layout_constraintVertical_bias="0.035" />
+
+    <TextView
+        android:id="@+id/habilidadesNome"
+        android:layout_width="96dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="24dp"
+        android:text="Habilidades: "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nome_altura"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tiposNome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="164dp"
+        android:text="Tipos: "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/habilidadesRecycler"
+        app:layout_constraintVertical_bias="0.051" />
+
+    <TextView
+        android:id="@+id/estatiscaNome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Estatísticas: "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.114"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/movimentosRecycler"
+        app:layout_constraintVertical_bias="0.089" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/movimentosRecycler"
+        android:layout_width="370dp"
+        android:layout_height="44dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.926"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/movimentosNome"
+        app:layout_constraintVertical_bias="0.109" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/estatisticaRecycler"
+        android:layout_width="362dp"
+        android:layout_height="66dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.755"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/estatiscaNome"
+        app:layout_constraintVertical_bias="0.275" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/tiposRecycler"
+        android:layout_width="358dp"
+        android:layout_height="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.698"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tiposNome"
+        app:layout_constraintVertical_bias="0.058" />
+
+    <TextView
+        android:id="@+id/movimentosNome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Movimentos: "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.116"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tiposRecycler"
+        app:layout_constraintVertical_bias="0.07" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
